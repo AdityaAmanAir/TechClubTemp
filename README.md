@@ -1,61 +1,78 @@
 # ios Tech Club Website
 
-A multi-page technical community website built for the Tech Clubs. The project focuses on a high-performance, responsive user experience with a modern dark aesthetic.
+A professional, multi-page technical community platform designed with an Apple-inspired dark aesthetic. This project serves as a digital hub for student developers to collaborate, learn, and showcase their innovative projects.
 
+## Features
+
+- **Apple-Inspired Design:** A modern, premium dark aesthetic with smooth transitions and glassmorphism.
+- **Multi-Page Architecture:** Includes dedicated sections for Home, About & Team, Events & Gallery, and Projects & Resources.
+- **Animated Geometric Background:** A dynamic and interactive background pattern implemented via `pattern.js`.
+- **Integrated Form Management:** Secure newsletter and application form submissions integrated with Google Sheets via Google Apps Script.
+- **Resource Repository:** A dedicated section for sharing learning paths and downloadable project resources.
+- **Responsive Layout:** Fully optimized for a seamless experience across desktop, tablet, and mobile devices.
 
 ## Tech Stack
 
-- **Core:** HTML5, Vanilla CSS, JavaScript (ES6+).
-- **Build Tool:** Vite.
-- **Integration:** Google Apps Script (Backend for Sheet logging).
-- **Deployment:** Optimized for Vercel and GitHub Pages.
-
-## Configuration
-
-Create a `.env` file in the root directory and add the following variable:
-
-```text
-VITE_GOOGLE_SHEET_URL=your_google_apps_script_url
-```
-
-All environment variables used in the frontend must be prefixed with `VITE_` as per Vite requirements.
-
-## Project Structure
-
-- `/public`: Static assets including downloadable resources (e.g., thanks.pdf).
-- `index.html`: Entry point for the Home page.
-- `about.html`, `events.html`, `projects.html`: Functional sub-pages.
-- `script.js`: Core application logic and API integrations.
-- `style.css`: Centralized design system and responsive layouts.
-- `pattern.js`: Animated background logic.
+- **Frontend:** HTML5, Vanilla CSS, JavaScript (ES6+).
+- **Build Tool:** [Vite](https://vitejs.dev/) for fast development and optimized production builds.
+- **Animations:** Custom CSS animations and Canvas API (`pattern.js`).
+- **Backend Integration:** Google Apps Script for handling form data and logging to Google Sheets.
+- **Deployment:** Optimized for hosting on Vercel and GitHub Pages.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (Latest LTS recommended).
-- npm or yarn.
+- **Node.js:** Latest LTS version highly recommended.
+- **npm** or **yarn** package manager.
 
 ### Installation
 
-1. Clone the repository.
-2. Install dependencies:
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd TechClubTemp
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
 
+### Configuration
+
+Create a `.env` file in the root directory and add your Google Apps Script URL:
+
+```text
+VITE_GOOGLE_SHEET_URL=your_google_apps_script_url
+```
+
+*Note: Environment variables in Vite must be prefixed with `VITE_` to be accessible in the frontend.*
+
 ### Development
 
-Run the local development server:
+Start the local development server:
 ```bash
 npm run dev
 ```
 
-### Production Build
+### Production
 
-Generate optimized production files in the `dist/` directory:
+Build the project for production:
 ```bash
 npm run build
 ```
+The optimized files will be generated in the `dist/` directory, ready for deployment.
 
-The output in `dist/` is ready for deployment on any static hosting provider.
+## Project Structure
+
+- `/public`: Static assets (images, PDFs, icons).
+- `index.html`: Home page entry point.
+- `about.html`: Team details and mission statement.
+- `events.html`: Timeline of past and upcoming club events.
+- `projects.html`: Showcase of club projects and learning resources.
+- `style.css`: Centralized design system using CSS variables.
+- `script.js`: Core application logic, form handling, and API integration.
+- `pattern.js`: Logic for the animated geometric background.
+- `vite.config.js`: Configuration for the Vite build tool.
+
