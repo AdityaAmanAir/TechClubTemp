@@ -2,5 +2,7 @@
 .env
 .env.local
 node_modules
-dist
+# Vite build output
+dist/
 .DS_Store
+/dist
