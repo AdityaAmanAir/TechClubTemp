@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.disabled = true;
 
             // 2. Google Sheets Integration
-            const SCRIPT_URL = 'LOL NOO!!! It is my API , i cannot make it public, make your own GOOGLE SHEET API by extension "google apps script"';
+            const SCRIPT_URL = import.meta.env.VITE_GOOGLE_SHEET_URL;
 
             try {
                 // Send data to Google Sheets
